@@ -1,0 +1,18 @@
+{
+    "description": "",
+    "type": "neos-plugin",
+    "name": "diu/poll-plugin",
+    "require": {
+        "neos/flow": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "DIU\\Poll\\Plugin\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "DIU.Poll.Plugin"
+        }
+    }
+}

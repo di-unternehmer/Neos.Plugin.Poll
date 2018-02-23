@@ -1,0 +1,6 @@
+Neos:
+  Flow:
+    mvc:
+      routes:
+        DIU.Poll.Plugin:
+          position: 'before Neos.Neos'

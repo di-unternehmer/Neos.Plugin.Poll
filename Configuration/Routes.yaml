@@ -1,0 +1,11 @@
+
+-
+  name: 'Update answer'
+  uriPattern: 'diu-poll-plugin/poll/update'
+  defaults:
+    '@package': 'DIU.Poll.Plugin'
+    '@controller': 'Poll'
+    '@action':     'update'
+    '@format':     'json'
+  appendExceedingArguments: true
+  httpMethods: ['POST']

@@ -1,0 +1,17 @@
+#                                                                        #
+# Security policy for the DIU Poll package                               #
+#                                                                        #
+
+privilegeTargets:
+
+  'Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege':
+
+    'DIU.Poll.Plugin:Update':
+      matcher: 'method(DIU\Poll\Plugin\Controller\PollController->updateAction())'
+
+roles:
+  'Neos.Flow:Everybody':
+    privileges:
+      -
+        privilegeTarget: 'DIU.Poll.Plugin:Update'
+        permission: GRANT

@@ -1,7 +1,8 @@
 {
+    "name": "diu/poll-plugin",
     "description": "",
     "type": "neos-plugin",
-    "name": "diu/poll-plugin",
+    "license": ["GPL-3.0-or-later"],
     "require": {
         "neos/flow": "*"
     },

@@ -50,7 +50,7 @@
         aloha:
           placeholder: 'Geben Sie hier die Frage ein'
 
-'DIU.Poll.Plugin:PollAnswer':
+'DIU.Poll.Plugin:Answer':
   superTypes:
     'Neos.Neos:Content': true
   ui:

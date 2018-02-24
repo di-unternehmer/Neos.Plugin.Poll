@@ -1,0 +1,66 @@
+'DIU.Poll.Plugin:Poll':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: 'Umfrage'
+    icon: 'icon-tasks'
+    group: listbox
+    position: 100
+    inspector:
+      groups:
+        settings:
+          label: 'Einstellungen'
+          icon: 'icon-gear'
+          position: 10
+  childNodes:
+    answers:
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          '*': false
+          'DIU.Poll.Plugin:PollAnswer': true
+  properties:
+    layout:
+      type: string
+      defaultValue: 'bordered'
+      ui:
+        label: 'Design'
+        reloadIfChanged: true
+        inspector:
+          group: 'settings'
+          position: 10
+          editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+          editorOptions:
+            values:
+              default:
+                label: 'Leicht blauer Hintergrund'
+              bordered:
+                label: 'Blauer Rand mit weißem Hintergrund'
+    headline:
+      type: string
+      defaultValue: 'Das Stimmungsbarometer.'
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Geben Sie hier die Überschrift ein'
+    question:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Geben Sie hier die Frage ein'
+
+'DIU.Poll.Plugin:PollAnswer':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: 'Umfrage Antwort'
+    icon: 'icon-check-square-o'
+    group: 'general'
+  properties:
+    answer:
+      type: string
+      ui:
+        inlineEditable: true
+        aloha:
+          placeholder: 'Geben Sie hier eine Anwort ein'

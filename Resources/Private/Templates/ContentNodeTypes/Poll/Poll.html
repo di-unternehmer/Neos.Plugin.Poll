@@ -1,0 +1,18 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+
+<div{attributes -> f:format.raw()}>
+  <div class="diu-poll-plugin-listbox-container diu-poll-plugin-wrapper {f:if(condition: '{neos:rendering.inBackend()}', then: 'backend', else: 'frontend diu-poll-plugin-init')}">
+    <neos:contentElement.wrap>
+      <neos:contentElement.editable property='headline' tag="h2" class="headline-container" />            
+    </neos:contentElement.wrap>
+
+    <neos:contentElement.wrap>
+      <neos:contentElement.editable property='question' tag="div" class="diu-bqde-poll-question-container" />            
+    </neos:contentElement.wrap>
+    
+    <div class="diu-poll-plugin-error error"></div>
+    <div class="diu-poll-plugin-answers-wrapper">
+      {answers -> f:format.raw()}
+    </div>
+  </div>
+</div>

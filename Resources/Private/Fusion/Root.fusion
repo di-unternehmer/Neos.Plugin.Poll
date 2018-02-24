@@ -1,0 +1,28 @@
+prototype(DIU.Poll.Plugin:Poll) < prototype(Neos.Neos:Content) {
+    templatePath = 'resource://DIU.Poll.Plugin/Private/Templates/ContentNodeTypes/Poll/Poll.html'
+    attributes.class = ${'diu-bqde-listbox-wrapper diu-bqde-poll-wrapper diu-bqde-listbox-' + q(node).property('layout')}
+
+    headline = ${q(node).property('headline')}
+    question = ${q(node).property('question')}
+
+    answers = ContentCollection {
+        nodePath = 'answers'
+    }
+
+    @cache {
+        mode = 'uncached'
+        entryIdentifier {
+            node = ${node}
+        }
+        context {
+            1 = 'node'
+            2 = 'documentNode'
+        }
+    }
+}
+
+prototype(DIU.Poll.Plugin:Answer) < prototype(Neos.Neos:Content) {
+    templatePath = 'resource://DIU.Poll.Plugin/Private/Templates/ContentNodeTypes/Poll/PollAnswer.html'
+
+    answer = ${q(node).property('answer')}
+}

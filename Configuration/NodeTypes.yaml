@@ -18,7 +18,7 @@
       constraints:
         nodeTypes:
           '*': false
-          'DIU.Poll.Plugin:PollAnswer': true
+          'DIU.Poll.Plugin:Answer': true
   properties:
     layout:
       type: string

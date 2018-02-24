@@ -4,3 +4,13 @@ Neos:
       routes:
         DIU.Poll.Plugin:
           position: 'before Neos.Neos'
+
+  Neos:
+    userInterface:
+      translation:
+        autoInclude:
+          DIU.Poll.Plugin:
+            - 'NodeTypes/*'
+    fusion:
+      autoInclude:
+        DIU.Poll.Plugin: true

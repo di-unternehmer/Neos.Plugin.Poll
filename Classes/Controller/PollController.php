@@ -38,7 +38,7 @@ class PollController extends ActionController
      * @Flow\SkipCsrfProtection
      *
      * @param string $nodeName The node name of the selected answer
-     * @param array $nodeNames The node name of the selected answer
+     * @param array $nodeNames All available node names of the poll which should be returned
      *
      * @throws IllegalObjectTypeException
      * @return void
